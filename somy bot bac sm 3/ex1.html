@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title> Somy Bot </title>
+  <link rel="icon" type="image/x-icon" href="Nouveau dossier/images/sss.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <style>
+    /* === Global Styles === */
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Raleway", sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+  /* === navbar Section === */
+    .navbar {
+      transition: box-shadow 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand {
+      font-size: 28px; /* Larger font size */
+      font-weight: bold; /* Bold text */
+      color: #ffffff !important; /* White text color */
+      text-transform: uppercase; /* Uppercase text */
+      letter-spacing: 2px; /* Spacing between letters */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+      transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+    .navbar-brand:hover {
+      color: #d3d3d3 !important; /* Change color on hover */
+      text-shadow: 2px 2px 8px rgba(29, 29, 29, 0.8); /* Glow effect on hover */
+    }
+
+    .navbar-inverse {
+      background: linear-gradient(135deg, #1c2d5b8f, #010c30); /* Gradient background */
+    }
+    /* === Header Section === */
+    .bgimg-1 {
+    background-image: url('Nouveau dossier/images/9.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold; 
+    text-shadow: 8px 5px 7px rgba(0, 0, 0, 0.5); 
+    
+  
+}
+
+    /* === Cards === */
+    .course-card, .testimonial-card, .blog-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover, .testimonial-card:hover, .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-card img, .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* === Testimonials === */
+    .testimonial-card {
+      padding: 20px;
+      margin: 20px 0;
+    }
+/* === footer === */
+    .footer {
+      background: #111827;
+      color: #ffffff;
+      padding: 64px 32px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-section ul li a {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #ffffff;
+    }
+
+    .footer-section p {
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 8px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #374151;
+      border-radius: 8px;
+      background: #1f2937;
+      color: #ffffff;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #6b7280;
+    }
+
+    .newsletter-form button {
+      padding: 12px 24px;
+      background: #3b82f6;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #2563eb;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-icons a {
+      color: #9ca3af;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid #374151;
+      text-align: center;
+      color: #9ca3af;
+    }
+
+    .footer-bottom a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-bottom a:hover {
+      color: #2563eb;
+    }
+
+    /* === Responsive Design === */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+      }
+    }
+
+    /* === Live Chat Widget === */
+    .chat-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1e3c72;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 999; /* Lower z-index than Dark Mode button */
+    }
+
+    .chat-widget:hover {
+      background: #2a5298;
+    }
+
+    /* === Scroll-to-Top Button === */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #1e3c72;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: none;
+    }
+
+    .scroll-to-top:hover {
+      background: #2b5f84;
+    }
+
+ /* Swiper Container */
+ .swiper-container {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Swiper Slide */
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #000; /* Fallback background */
+        }
+
+        /* Slide Image */
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Slide Content */
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border-radius: 10px;
+        }
+
+        .slide-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .slide-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .slide-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff5722;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .slide-content .btn:hover {
+            background: #e64a19;
+        }
+    
+  </style>
+</head>
+<body>
+
+<!-- === Live Chat Widget === -->
+<div class="chat-widget" onclick="openChat()">
+  <i class="fa fa-comments"></i>
+</div>
+
+<!-- === Scroll-to-Top Button === -->
+<div class="scroll-to-top" onclick="scrollToTop()">
+  <i class="fa fa-arrow-up"></i>
+</div>
+
+<!-- === Navbar === -->
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">SOMY BOT</a>
+          </div>
+
+          <div class="navbar-collapse collapse" id="mobile_menu">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                 </span> About Us <span class="caret"></span>
+                 <ul class="dropdown-menu">
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#team">School Activities</a></li>
+                  <li><a href="#achievements">Our Achievements</a></li>
+                  <li><a href="#courses">Subjects</a></li>
+                  <li><a href="#map">High School Location</a></li>
+                </ul>
+                
+              </li>
+              <li><a href="Nouveau dossier\about_me/me/index.html">About Me</a></li>
+              <li><a href="#courses1">Courses</a></li>
+              <li><a href="#memories">Activities</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li>
+                <form action="" class="navbar-form">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input type="search" name="search" id="" placeholder="Search Anything Here..." class="form-control">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://www.instagram.com/paparrazi37/?igsh=MWMyaGMyaW5uaHdmbQ%3D%3D#"><span class="glyphicon glyphicon-user"></span>    School Platforme</a></li>
+              <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-log-in"></span>    Login / Sign Up <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="Nouveau dossier\about_me/2.html">Login</a></li>
+                  <li><a href="Nouveau dossier\about_me/2.html">Sign Up</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- === Home Page === -->
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-hide-small animate__animated animate__fadeIn">Welcome to Ibnou Soulaimane Arrassmouki hight school</h1>
+    <h1 class="w3-xxlarge w3-hide-large w3-hide-medium animate__animated animate__fadeIn">Welcome to Ibn soulayman erresmoki hight school</h1>
+    <p class="w3-large animate__animated animate__fadeInUp">Join us to descover our class " 1 BAC SM 3 " and our hight school in general .</p>
+    <p><a href="#about " class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off animate__animated animate__fadeInUp">let's   start</a></p>
+  </div>
+</header>
+
+
+<!-- === About Page === -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="about">
+  <h3 class="w3-center animate__animated animate__fadeIn">ABOUT US</h3>
+  <p class="w3-center w3-large animate__animated animate__fadeInUp">Our Mission and Vision as students this year</p>
+
+  <!-- Mission and Vision Section -->
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-half">
+      <div class="w3-card w3-padding-large w3-white w3-hover-shadow animate__animated animate__fadeInLeft">
+        <i class="fa fa-bullseye w3-text-blue w3-xxlarge"></i>
+        <h4>Our Mission</h4>
+        <p>To excel academically in the Sciences and Mathematics, develop critical thinking and problem-solving skills, and contribute positively to my community through innovation and collaboration.</p>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-card w3-padding-large w3-white w3-hover-shadow animate__animated animate__fadeInRight">
+        <i class="fa fa-eye w3-text-green w3-xxlarge"></i>
+        <h4>Our Vision</h4>
+        <p>To become a leader in the fields of engineering, technology, or scientific research, as will as enjoying our 1 bac year and get good memories</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- === Team Section === -->
+<div class="w3-container w3-center w3-padding-64" id="team">
+  <h3>School Activities </h3>
+  <p class="w3-large">check some of Activities organized by Ibnou Soulaimane Arrassmouki high school <div> <p> do it now what are you waiting for </p></div> </p>
+
+  <!-- Team Grid -->
+  <div class="w3-row-padding w3-center" style="margin-top:64px" id="team-grid">
+    <!-- Team Member 1 -->
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/14.jpg" alt="John Doe" style="width:100%">
+        <div class="w3-container">
+          <h4>SHORT STORY </h4>
+          <p class="w3-opacity">Hi there im Somy Bot the one how created this web and i got the 3 place in Sous Massa region in this compitition of short story in English   </p>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/33.jpg" alt="Jane Smith" style="width:100%">
+        <div class="w3-container">
+          <h4>TUTORINGTHON </h4>
+          <p class="w3-opacity"> What 
+            i know about it is that it aims to prepare second-year Baccalaureate students to pass the national exam with the highest grades. </p>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 3 -->
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/44.jpg" alt="Emily Brown" style="width:100%">
+        <div class="w3-container">
+          <h4>مسابقة القران الكريم </h4>
+          <p class="w3-opacity">تعد هده المسابقة مسابقة لحفض القران الكريم كل مستوى و السورة التي قدمة اليه مع حسن التلاوة والاداء </p>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 4 -->
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/10.jpg" alt="Michael Lee" style="width:100%">
+        <div class="w3-container">
+          <h4>JOURNY OF EXELLENCE</h4>
+          <p class="w3-opacity">Our hight school arranged a trip for the top-performing students who 
+            achieved the highest scores at each level. </p>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 5 -->
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/20.jpg" alt="Sarah Johnson" style="width:100%">
+        <div class="w3-container">
+          <h4>PODCAST</h4>
+          <p class="w3-opacity">Our high school made a compitition of podcast and the winner was Nohayla Elbaz from my class and I'm so proud of her .</p>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 6 -->
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/77.jpg" alt="David Smith" style="width:100%">
+        <div class="w3-container">
+          <h4>GAMES</h4>
+          <p class="w3-opacity">Games compitition like dama ext are relly good even if i didn't try them yet hehe </p>
+        </div>
+      </div>
+    </div>
+    
+  <!-- Hidden Team Members -->
+  <div class="w3-row-padding w3-center" style="margin-top:64px; display:none;" id="hidden-team">
+    <!-- Add the remaining 21 team members here -->
+    <!-- Example: -->
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/88.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>EXCHANGE PROGRAMS</h4>
+          <p class="w3-opacity">exange programs with other student's in other Countries organized by Halima Kounniba English teacher </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/15.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>SPORT</h4>
+          <p class="w3-opacity">some of our students win in sport compititions "that's all what i know "</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/16.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>NO TO VIOLENCE AT SCHOOL</h4>
+          <p class="w3-opacity"></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/17.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>SELF-WORTH</h4>
+          <p class="w3-opacity">self confident is inportent to succes in your life</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/26.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>ARDWINO AND PROGRAMMING</h4>
+          <p class="w3-opacity"></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/55.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>GAMES</h4>
+          <p class="w3-opacity"></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/12.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>VOLLEYBALL AND FOOTBALL TOURNAMENTS</h4>
+          <p class="w3-opacity"></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/13.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>THE GREEN MARCH</h4>
+          <p class="w3-opacity">and i was one of the participents hehe</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/24.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>PRESENTATION ABOUT THE FIRST AID </h4>
+          <p class="w3-opacity">it was at friday evening but i wans't there </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/18.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>CLEANUP CAMPAIGN</h4>
+          <p class="w3-opacity">i were one of the participenyts in this event and it was really Amazing the way that we work together and help each others to meake our school best </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/19.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>SAFER INTERNET DAY </h4>
+          <p class="w3-opacity"></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/23.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>EXELLECE CEREMONY </h4>
+          <p class="w3-opacity">Im wasn't one of thoses student's but at less i was there in this ceremony and it was amazing </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 w3-margin-bottom">
+      <div class="w3-card w3-hover-shadow">
+        <img src="Nouveau dossier/images/22.jpg" alt="Team Member 9" style="width:100%">
+        <div class="w3-container">
+          <h4>ART OF PUBLIC SPEAKING </h4>
+          <p class="w3-opacity">its really importnt to know body language  and how to talke to public and knowing this art  will really help in the future </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+
+  </div>
+
+  <!-- View More Button -->
+  <div class="w3-center w3-padding-32">
+    <button class="w3-button w3-black w3-hover-blue" onclick="showMoreTeam()">View More</button>
+  </div>
+</div>
+
+<!-- JavaScript to Show Hidden Team Members -->
+<script>
+  function showMoreTeam() {
+    const hiddenTeam = document.getElementById("hidden-team");
+    const viewMoreButton = document.querySelector("button");
+
+    if (hiddenTeam.style.display === "none") {
+      hiddenTeam.style.display = "block";
+      viewMoreButton.textContent = "View Less";
+    } else {
+      hiddenTeam.style.display = "none";
+      viewMoreButton.textContent = "View More";
+    }
+  }
+</script>
+
+
+
+
+
+
+  <!-- Statistics Section -->
+  <div class="w3-container w3-center w3-padding-64 w3-black"id="achievements">
+    <h3>Ibnou Soulaimane Arrassmouki hight school Achievements</h3>
+    <p class="w3-large">Numbers that speak for themselves</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <h2 class="w3-text-blue">10,000+</h2>
+        <p>Students Enrolled</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <h2 class="w3-text-green">200+</h2>
+        <p>Courses Offered</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <h2 class="w3-text-orange">95%</h2>
+        <p>Satisfaction Rate</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <h2 class="w3-text-purple">50+</h2>
+        <p>Countries Reached</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="w3-container w3-center w3-padding-64">
+    <h3>What Our Students Say</h3>
+    
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-card w3-padding">
+          <p><i class="fa fa-quote-left w3-opacity"></i> School events are well-organized and really bring the student body together. <i class="fa fa-quote-right w3-opacity"></i></p>
+          
+        </div>
+      </div>
+      <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-card w3-padding">
+          <p><i class="fa fa-quote-left w3-opacity"></i>There’s a welcoming environment that makes it easy to make friends and feel included. <i class="fa fa-quote-right w3-opacity"></i></p>
+          
+        </div>
+      </div>
+      <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-card w3-padding">
+          <p><i class="fa fa-quote-left w3-opacity"></i> Academic programs are challenging but well-structured, encouraging students to grow.<i class="fa fa-quote-right w3-opacity"></i></p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call-to-Action Section -->
+  <div class="w3-container w3-center w3-padding-64 w3-grey">
+    <h3>How is it ?</h3>
+    <p class="w3-large">know more about me by only one clik what are you waiting explore it now !</p>
+    
+    <p><a href="Nouveau dossier\about_me/me/index.html" class="w3-button w3-black w3-hover-white w3-large">About me</a></p>
+  </div>
+</div>
+
+<!-- === Courses Page === -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="courses">
+  <h3 class="w3-center animate__animated animate__fadeIn">subject we will be exeminad on in the regional exam </h3>
+  <p class="w3-center w3-large animate__animated animate__fadeInUp">Explore them now </p>
+
+  <!-- Course Filters -->
+  <div class="w3-center w3-padding-32 animate__animated animate__fadeIn">
+
+    <button class="w3-button w3-black w3-hover-green" onclick="filterCourses('web')">Arabic</button>
+    <button class="w3-button w3-black w3-hover-orange" onclick="filterCourses('data')">Frensh</button>
+    <button class="w3-button w3-black w3-hover-pink" onclick="filterCourses('design')">Islamic</button>
+    <button class="w3-button w3-black w3-hover-purple" onclick="filterCourses('mobile')">History</button>
+  </div>
+
+  
+
+  <!-- Testimonials Section -->
+  <div class="w3-container w3-padding-64 w3-center">
+    <h3>What Our Students Say</h3>
+    <p></p>
+    <p></p>
+   
+    
+    <div class="w3-row-padding">
+      <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-card w3-padding">
+          <p><i class="fa fa-quote-left w3-opacity"></i> The school does a great job preparing students for college and future careers.<i class="fa fa-quote-right w3-opacity"></i></p>
+          
+        </div>
+      </div>
+      <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-card w3-padding">
+          <p><i class="fa fa-quote-left w3-opacity"></i>There’s a lot of pressure on grades, which can create a stressful environment. <i class="fa fa-quote-right w3-opacity"></i></p>
+          
+        </div>
+      </div>
+      <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-card w3-padding">
+          <p><i class="fa fa-quote-left w3-opacity"></i> The teachers are genuinely passionate and always willing to help outside of class.<i class="fa fa-quote-right w3-opacity"></i></p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Call-to-Action -->
+  <div class="w3-container w3-black w3-center w3-padding-64"id="courses1">
+    <h3>Ready to Start Learning?</h3>
+    <p>come withe me and let's explore our lessons.</p>
+   
+    <p><a href="https://www.alloschool.com/category/mathematical-sciences" class=" w3-button w3-blue w3-hover-green w3-large">Courses</a></p>
+  </div>
+</div>
+
+<!-- JavaScript for Filtering Courses -->
+<script>
+  function filterCourses(category) {
+    const cards = document.querySelectorAll('.course-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.classList.contains(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+<!-- Swiper Container -->
+<div class="swiper-container" id="memories">
+  <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+          <img src="Nouveau dossier/images/2.jpg" alt="Banner 1">
+          <div class="slide-content">
+              <h2>Sport : Basketball / volleyball / football </i></h2>
+              <p>In our high school, basketball and volleyball are popular sports that promote teamwork and fitness. The basketball court is always lively with practice and matches, while the volleyball
+                 court sees exciting rallies. Both sports build camaraderie and school spirit, making them an essential part of our school's sports culture</p>
+              <a href="https://www.quora.com/What-are-some-advantages-of-playing-soccer-basketball-or-volleyball" class="btn">Learn More</a>
+          </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+          <img src="Nouveau dossier/images/1.jpg" alt="Banner 2">
+          <div class="slide-content">
+              <h2> Excellence Ceremony </h2>
+              <p>With the support of the Association of Parents and Guardians of Students, the Ibn solayman erresmoki  Technical High School 
+                organized an Excellence Ceremony for the first semester of the school year on the evening of Friday 28 /02 /2025 at the Music Institute  "الحاج بلعيد"</p>
+                <a href="https://www.empuls.io/fr/glossary/excellence-awards#:~:text=%E2%80%8DCredibility%3A%20It%20adds%20credibility%20to,other%20accomplished%20individuals%20and%20organizations." class="btn">Learn More</a>
+          </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+          <img src="Nouveau dossier/images/3.jpg" alt="Banner 3">
+          <div class="slide-content">
+              <h2>Amazigh new year with us </h2>
+              <p>evry amazigh new year ibn soulayman erresmoki high school celebrat it with vibrant tradions  music and joyous festival. experience the rich heritage and unique spirit of yennayer in our special way . </p>
+              <a href="https://en.wikipedia.org/wiki/Yennayer" class="btn">Learn More</a>
+          </div>
+      </div>
+           <!-- Slide 3 -->
+           <div class="swiper-slide">
+            <img src="Nouveau dossier/images/4.jpg" alt="Banner 3">
+            <div class="slide-content">
+                <h2>volleyball games </h2>
+                <p>each friday evnening students come and play games such volleyball soccer pingponk ext...</p>
+                <a href="https://www.quora.com/What-are-some-advantages-of-playing-soccer-basketball-or-volleyball" class="btn">Learn More</a>
+            </div>
+        </div>
+             <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="Nouveau dossier/images/7.jpg" alt="Banner 3">
+        <div class="slide-content">
+            <h2>Technical wing </h2>
+            <p>every technical school like ibn soulayman erresmoki hight school need a technical wing right .</p>
+            <a href="https://www.indeed.com/career-advice/career-development/what-is-technical-school#:~:text=Students%20who%20attend%20a%20technical,offer%20training%20in%20many%20disciplines." class="btn">Learn More</a>
+        </div>
+    </div>
+         <!-- Slide 3 -->
+         <div class="swiper-slide">
+          <img src="Nouveau dossier/images/11.jpg" alt="Banner 3">
+          <div class="slide-content">
+              <h2>Al massira El khadra </h2>
+              <p>In our hight school each year we celebrate events like Id yannayer and elmassira elkhadra ext ...</p>
+              <a href="https://ecole-don-bosco.ma/47e-anniversaire-de-la-marche-verte/#:~:text=La%20Marche%20Verte%20ou%20%C2%AB%20Al,marche%2C%20po%C3%A8mes%2C%20chants%20%E2%80%A6." class="btn">Learn More</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  // Initialize Swiper
+  const swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      loop: true, // Infinite loop
+      autoplay: {
+          delay: 5000, // Auto-slide every 5 seconds
+          disableOnInteraction: false, // Continue autoplay after user interaction
+      },
+  });
+</script>
+
+<!-- === Contact Page === -->
+<div class="w3-container" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center animate__animated animate__fadeIn">CONTACT US</h3>
+    <p class="w3-center w3-large animate__animated animate__fadeInUp">We'd love to hear from you!</p>
+    
+    <!-- Contact Information Section -->
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <!-- Address -->
+      <div class="w3-col l4 m6 w3-margin-bottom animate__animated animate__fadeInLeft">
+        <div class="w3-card w3-padding-32" style="background: #f4f4f4; border-radius: 10px;">
+          <i class="fa fa-map-marker w3-text-blue w3-xxlarge"></i>
+          <h4>Our hight school location</h4>
+          <p> ثانوية ابن سليمان الرسموكي، Tiznit 85000, Morocco</p>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div class="w3-col l4 m6 w3-margin-bottom animate__animated animate__fadeInUp">
+        <div class="w3-card w3-padding-32" style="background: #f4f4f4; border-radius: 10px;">
+          <i class="fa fa-phone w3-text-green w3-xxlarge"></i>
+          <h4>Call Us</h4>
+          <p>06*******9</p>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="w3-col l4 m6 w3-margin-bottom animate__animated animate__fadeInRight">
+        <div class="w3-card w3-padding-32" style="background: #f4f4f4; border-radius: 10px;">
+          <i class="fa fa-envelope w3-text-red w3-xxlarge"></i>
+          <h4>Email Us</h4>
+          <p>m**y******@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Contact Form Section -->
+    <div class="w3-row-padding" style="margin-top:64px">
+      <div class="w3-half animate__animated animate__fadeInLeft">
+        <form>
+          <div class="w3-section">
+            <label for="name">Name</label>
+            <input class="w3-input w3-border" type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="w3-section">
+            <label for="email">Email</label>
+            <input class="w3-input w3-border" type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="w3-section">
+            <label for="subject">Subject</label>
+            <input class="w3-input w3-border" type="text" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="w3-section">
+            <label for="message">Message</label>
+            <textarea class="w3-input w3-border" id="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button class="w3-button w3-black w3-block w3-section w3-hover-blue" type="submit">
+            <i class="fa fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+      <div class="w3-half animate__animated animate__fadeInRight" id="map">
+        <div class="w3-card w3-padding-32" style="background: #f4f4f4; border-radius: 10px;">
+          <h4>Visit Us
+            <p>  "ثانوية ابن سليمان الرسموكي، Tiznit 85000, Morocco"</p><p></p></h4>
+          <div id="map" style="height: 300px; border-radius: 10px; overflow: hidden;">
+            <!-- Embedded Google Map -->
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.7223899999997!2d-9.7424794!3d29.7085224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb479f60aeb65db%3A0x5342b9f4227fc8c!2sIbn%20Sulayman%20Al-Rasmouki%20Technical%20High%20School!5e0!3m2!1sen!2sma!4v1698765432100!5m2!1sen!2sma"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- === Footer === -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>We are a leading institution dedicated to providing a world-class education that nurtures the mind, body, and spirit of every student.</p>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#memories">Memories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="footer-section">
+      <h4>Subscribe </h4>
+      <p>Stay updated with the latest news and updates.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/r6vVsXVLRFjoHTNs/?mibextid=qi2Omg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/somaya._.too/?igsh=aW11eHN1ZnJ5MTR0" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 somy bot / Ibn Soulayman Errasmoki . All rights reserved. | <a href="Nouveau dossier\about_me/privice_policy.html">
+            Privacy Policy</a> | <a href="Nouveau dossier\about_me/privice_policy.html">Terms of Service</a></p>
+        </div>
+      </footer>
+
+<!-- === JavaScript === -->
+<script>
+  // Dark Mode Toggle
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const button = document.querySelector(".dark-mode-toggle");
+    if (document.body.classList.contains("dark-mode")) {
+      button.innerHTML = '<i class="fa fa-sun"></i> Light Mode';
+    } else {
+      button.innerHTML = '<i class="fa fa-moon"></i> Dark Mode';
+    }
+  }
+
+  // Scroll-to-Top Button
+  window.onscroll = function() {
+    const scrollButton = document.querySelector(".scroll-to-top");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollButton.style.display = "block";
+    } else {
+      scrollButton.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  // Live Chat Widget
+  function openChat() {
+    alert("Live chat is coming soon!");
+  }
+  $(window).scroll(function() {
+      if ($(this).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+
+    
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
